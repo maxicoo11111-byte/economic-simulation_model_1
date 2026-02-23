@@ -2,4 +2,8 @@ mesa>=3.0.3
 streamlit>=1.28.0
 pandas
 numpy
+<<<<<<< HEAD:requirements.txt
 PyYAML==6.0.2
+=======
+PyYAML==6.0.2
+>>>>>>> b79708c7bfdc9587d194efdd3bb0e2132886644a:utils/requirements.txt
