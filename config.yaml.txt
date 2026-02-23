@@ -1,0 +1,63 @@
+model:
+  steps: 120
+  seed: 42
+
+tax:
+  rate: 0.10                # ставка TheTAX
+  tax_wage: false           # облагать ли зарплату
+  tax_hh_to_hh: false       # облагать ли продажи между домохозяйствами
+  tariff_rate: 0.0          # ставка таможенной пошлины
+
+households:
+  count: 55000
+  consumption_rate_mean: 0.8
+  consumption_rate_std: 0.1
+  initial_savings_mean: 50000
+  initial_savings_std: 20000
+  unemployment_rate: 0.022
+  pensioner_share: 0.25
+  disabled_share: 0.03
+  veteran_share: 0.01
+  child_family_share: 0.3
+
+firms:
+  count: 3200
+  sector_distribution: [0.10, 0.08, 0.12, 0.15, 0.10, 0.10, 0.15, 0.10, 0.10]  # 9 секторов
+  size_distribution: "lognormal"
+  size_mean: 50
+  size_std: 100
+  wage_base_by_sector: [40000, 45000, 80000, 60000, 35000, 50000, 40000, 45000, 55000]
+  wage_ratio_manager: 4.0
+  wage_ratio_director: 30.0
+  share_manager: 0.15
+  share_director: 0.05
+  initial_balance_months: 3
+
+self_employed:
+  count: 4000
+  avg_income: 40000
+
+government:
+  X: 0.6           # доля трансфертов регионам
+  Y: 0.3           # доля федеральных госзакупок
+  Z: 0.1           # доля резерва
+  region_social_share: 0.7    # доля регионального бюджета на соцвыплаты
+  region_procurement_share: 0.3
+
+social:
+  pension_insurance: 23000
+  pension_social: 9400
+  child_allowance: 5000
+  disability_allowance: 3500
+  veteran_allowance: 4000
+  unemployment_benefit: 15886
+  poverty_line: 16000
+
+foreign_trade:
+  import_share_household: 0.30
+  import_share_firm: 0.15
+  total_export_value: 1700000000   # в масштабе 1:1000, рублей в месяц
+  export_sector_3_share: 0.6
+
+bank:
+  initial_capital: 1000000000

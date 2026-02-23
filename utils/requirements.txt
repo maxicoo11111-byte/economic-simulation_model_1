@@ -1,0 +1,4 @@
+mesa>=3.0.3
+streamlit>=1.28.0
+pandas
+numpy
